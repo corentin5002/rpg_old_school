@@ -10,12 +10,12 @@ include_directories(${CMAKE_SOURCE_DIR}/include)
 
 set(SOURCES
     src/main.cpp
-    src/Joueur.cpp
-    src/Personnage.cpp
-    src/Ennemi.cpp
-    src/Potion.cpp
-    src/Arme.cpp
-    src/Armure.cpp
+    src/classes/Joueur.cpp
+    src/classes/Personnage.cpp
+    src/classes/Ennemi.cpp
+    src/classes/Potion.cpp
+    src/classes/Arme.cpp
+    src/classes/Armure.cpp
 )
 
 add_executable(MonRPG ${SOURCES})

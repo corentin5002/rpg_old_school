@@ -35,3 +35,6 @@ void Personnage::ajouterObjet(Objet *objet) {
 bool Personnage::estVivant() const {
     return pv_ > 0;
 }
+
+
+

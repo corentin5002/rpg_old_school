@@ -8,4 +8,4 @@ public:
     Ennemi(int pv, int attaque, int defense) : Personnage(pv, attaque, defense) {}
 };
 
-#endif // ENNEMI_H
+#endif

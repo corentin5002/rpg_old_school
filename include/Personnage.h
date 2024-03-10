@@ -16,6 +16,15 @@ public:
     void ajouterObjet(Objet* objet);
     bool estVivant() const;
 
+    // Getter de la classe Personnage
+
+    int getPV() const { return pv_; }
+    int getAttaque() const { return attaque_; }
+    int getDefense() const { return defense_; }
+    const std::vector<Objet*>& getInventaire() const { return inventaire_; }
+
+
+
 protected:
     int pv_;
     int attaque_;
@@ -23,4 +32,4 @@ protected:
     std::vector<Objet*> inventaire_;
 };
 
-#endif // PERSONNAGE_H
+#endif

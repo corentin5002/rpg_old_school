@@ -5,6 +5,7 @@
 #include <fstream>
 #include <string>
 #include <vector>
+#include "Personnage.h"
 
 
 struct MenuOption {
@@ -13,7 +14,7 @@ struct MenuOption {
 };
 
 
-int menu() {
+int CombatMenu(Personnage *joueur) {
     initscr();
     raw();
     keypad(stdscr, TRUE);
@@ -24,6 +25,7 @@ int menu() {
 
 
     int height, width, start_y, start_x;
+    int padding = 2;
 
     height = 12;
     width = 60;
@@ -56,14 +58,14 @@ int menu() {
         for (int i = 0; i < options.size(); i++) {
             bool selected = (selected_option.line == options[i].line && selected_option.col == options[i].col);
 
-            mvwprintw(stdscr, 39, 2, "[debug] Selected option: %d %d     : %d", selected_option.line, selected_option.col, ch);
+//            mvwprintw(stdscr, 39, 2, "[debug] Selected option: %d %d     : %d", selected_option.line, selected_option.col, ch);
 
             if (selected) {
                 wattron(win, A_STANDOUT);
             } else {
                 wattroff(win, A_STANDOUT);
             }
-            mvwprintw(win, options[i].line + 2, options[i].col * 24 + 1, options[i].text.c_str());
+            mvwprintw(win, options[i].line + padding, options[i].col * 24 + 1 + padding, options[i].text.c_str());
         }
         wrefresh(win);
         ch = getch();

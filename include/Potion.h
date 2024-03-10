@@ -8,4 +8,4 @@ public:
     void utiliser(Personnage* p) override;
 };
 
-#endif // POTION_H
+#endif

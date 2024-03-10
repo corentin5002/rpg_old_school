@@ -16,4 +16,4 @@ private:
     void ramasserObjet(Objet* objet);
 };
 
-#endif // JOUEUR_H
+#endif

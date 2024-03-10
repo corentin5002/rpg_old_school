@@ -12,4 +12,4 @@ private:
     int bonusDefense_;
 };
 
-#endif // ARMURE_H
+#endif

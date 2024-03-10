@@ -1,12 +1,11 @@
 #include <iostream>
 #include "Joueur.h"
 #include "Ennemi.h"
+#include "Display.h"
+#include <ncurses.h>
 
 int main() {
-    Joueur joueur;
-    Ennemi ennemi(80, 2, 3);
-
-    joueur.rencontrer(&ennemi);
+    menu();
 
     return 0;
 }
